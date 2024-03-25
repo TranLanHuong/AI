@@ -1,8 +1,8 @@
-5 5  # Kích thước lưới (số hàng, số cột)
-0 0 1 0 0  # Lưới, 0 là ô trống, 1 là ô chướng ngại vật
+5 5  
+0 0 1 0 0  
 0 1 1 0 0
 0 0 0 0 0
 0 1 1 1 0
 0 0 0 0 0
-0 0  # Tọa độ điểm xuất phát
-4 4  # Tọa độ điểm đích
+0 0  
+4 4  

@@ -1,6 +1,7 @@
 import heapq
-
 class Node:
+    def __lt__(self, other):
+        return self.f() < other.f()
     def __init__(self, x, y, g, h, parent=None):
         self.x = x
         self.y = y
@@ -43,7 +44,7 @@ def astar(grid, start, goal):
     return None
 
 def read_input(file_name):
-    with open(file_name, 'input.txt') as file:
+    with open(file_name, 'r',encoding='utf-8') as file:
         rows, cols = map(int, file.readline().split())
         grid = []
         for _ in range(rows):
@@ -66,7 +67,7 @@ def main():
     input_file = 'input.txt'
     output_file = 'output.txt'
 
-    grid, start, goal = read_input('input.txt')
+    grid, start, goal = read_input(input_file)
     path = astar(grid, start, goal)
     write_output(path, output_file)
 
